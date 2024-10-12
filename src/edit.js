@@ -1,3 +1,5 @@
+import ServerSideRender from "@wordpress/server-side-render";
+import { Disabled } from "@wordpress/components";
 /**
  * Retrieves the translation of text.
  *
@@ -29,13 +31,15 @@ import './editor.scss';
  *
  * @return {Element} Element to render.
  */
-export default function Edit() {
+export default function Edit({ attributes }) {
 	return (
-		<p { ...useBlockProps() }>
-			{ __(
-				'Mapping Puzzle Block – hello from the editor!',
-				'mapping-puzzle-block'
-			) }
-		</p>
+		<div { ...useBlockProps() }>
+			<Disabled>
+				<ServerSideRender
+					block="detroitography/mapping-puzzle-block"
+					attributes={attributes}
+				/>
+			</Disabled>
+		</div>
 	);
 }

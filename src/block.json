@@ -1,11 +1,11 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "create-block/mapping-puzzle-block",
+	"name": "detroitography/mapping-puzzle-block",
 	"version": "0.1.0",
 	"title": "Mapping Puzzle Block",
 	"category": "widgets",
-	"icon": "mapMarker",
+	"icon": "location-alt",
 	"description": "Embed for Detroit-Windsor mapping puzzle and survey.",
 	"example": {},
 	"supports": {
@@ -15,5 +15,5 @@
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",
-	"viewScript": "file:./view.js"
+	"render": "file:./render.php"
 }
